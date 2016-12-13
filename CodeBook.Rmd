@@ -149,7 +149,7 @@ data_tidy <- aggregate(. ~ subject + activity, data_all_clean, mean)
 data_tidy <- arrange(data_tidy, subject, activity)
 
 ## Write to txt file
-write.table(data_tidy, './data/UCI_HAR_tidy_data.txt', row.names=TRUE)
+write.table(data_tidy, './data/UCI_HAR_tidy_data.txt', row.names=FALSE)
 
 dim(data_all_clean)
 head(data_all_clean)

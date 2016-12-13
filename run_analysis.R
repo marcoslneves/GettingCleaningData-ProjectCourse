@@ -74,8 +74,11 @@ names(data_features) = data_features_names$V2
 
 ## Merging the Activity train and test datasets and merges the result dataset with the Activity Labels dataset to get more descriptive labels  
 data_activity <- rbind(data_activity_train, data_activity_test)
-data_activity <- merge(data_activity, data_activity_labels, by = "V1")
+data_activity$index <- 1:nrow(data_activity)
+data_activity <- merge(data_activity, data_activity_labels, by = "V1", all.x = FALSE)
+data_activity <- arrange(data_activity, index)
 data_activity$V1 <- NULL
+data_activity$index <- NULL
 names(data_activity) = "activity"
 
 ## Merging the train and test Subject identifier data
@@ -86,9 +89,9 @@ names(data_subject) = "subject"
 ##### 3 - Extract only the mean and standard deviation measurements from data_features
 data_features_filtered <- data_features[, grepl("mean\\(\\)|std\\(\\)", names(data_features))]
 
-
 ## Merges the subject, activity and features datasets
 data_all_clean <- tbl_df(cbind(data_subject, data_activity, data_features_filtered))
+
 
 ## Descriptive variable names
 names_vec <- names(data_all_clean)
@@ -116,7 +119,7 @@ data_tidy <- arrange(data_tidy, subject, activity)
 write.table(data_tidy, './data/UCI_HAR_tidy_data.txt', row.names=FALSE)
 
 ## Check the final data frame
-dim(data_all_clean)
-head(data_all_clean)
+dim(data_tidy)
+head(data_tidy)
 
 print("PROCESS COMPLETE")

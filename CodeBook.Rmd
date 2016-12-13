@@ -1,15 +1,11 @@
----
-title: "Getting and Cleaning Data - Course Project"
-author: "Marcos Neves"
-date: "12/11/2016"
-output: html_document
----
+Getting And Cleaning Data - Course Project
+=========================================
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Description of the project
+### Introduction
 The project was designed to generate a single and tidy dataset made from a data cleaning process performed on 8 datasets downloaded from <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>. The goal is to have a single file ready to perform Exploratory Analysis
 
 The tidy data obtained has been made merging de training and test datasets and using the others datasets to get more descriptive activity labels and column names.

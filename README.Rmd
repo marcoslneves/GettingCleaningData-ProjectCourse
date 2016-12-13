@@ -1,15 +1,8 @@
----
-title: "Getting And Cleaning Data - Course Project"
-author: "Marcos Neves"
-date: "12/12/2016"
-output: html_document
----
+Getting And Cleaning Data - Course Project
+=========================================
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+### Description
 
-## Description
 This repo contains my final project to Coursera Course "Getting And Cleaning Data" that is part of Data Sciencist Specialization.  
 There is just one single script called `run_analysis.R` containing all functions and code to do:
 

@@ -1,0 +1,38 @@
+---
+title: "Getting And Cleaning Data - Course Project"
+author: "Marcos Neves"
+date: "12/12/2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Description
+This repo contains my final project to Coursera Course "Getting And Cleaning Data" that is part of Data Sciencist Specialization.  
+There is just one single script called `run_analysis.R` containing all functions and code to do:
+
+1. Download the raw datasets from UCI Repo
+2. Read data 
+3. Do data transformations to merge, filter and clean 
+4. Write a single output tidy data to a TXT file named "./data/UCI_HAR_tidy_data.txt""
+
+The `CodeBook.md` have more detail about the datasets and process.
+
+
+### Run from command line
+
+1. Clone this repo
+2. Run the script:
+
+       $ Rscript run_analysis.R
+
+3. Look for the final dataset at `./data/UCI_HAR_tidy_data.txt`
+
+	   $ head -3 data/UCI_HAR_tidy_data.txt
+	   
+### Open project with RStudio
+
+This repo also contains the RStudio project file `GettingCleaningData-ProjectCourse.Rproj`
+
